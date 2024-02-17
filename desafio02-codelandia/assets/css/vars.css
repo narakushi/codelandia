@@ -1,0 +1,11 @@
+:root{
+    /* COLORS */
+    --blue-sky: #00AEFF;
+    --extra-light-gray: #f7f6f6; 
+    --white-color: #ffffff;
+    --light-gray: #EBE9EA;
+
+    /* UNIT */
+
+    --gap: 1rem;
+}

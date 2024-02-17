@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Shoes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/img/shoe-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/vars.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container-one">
+        <header class="container-one__header bg-header">
+                <div class="patterns-css">
+                    <div class="header__info">
+                        <span>Ganhe R$ 10,00 de desconto no frete</span>
+                    </div>
+                </div>
+                <div class="header__logo">
+                    <h1>JordanShoes</h1>
+                </div>
+        </header>
+        <div class="container-one__cover">
+        </div>
+        <div class="cover__content patterns-css">
+            <h1>A melhor loja de Jordan</h1>
+            <p id="typed"></p>
+            <div id="typed-strings">
+                <p>O tênis Jordan é fruto de uma velha e forte parceria entre a Nike e o jogador Michael Jordan.</p>
+            </div>
+        </div>
+    </div>
+    <main class="container-two">
+        <div class="container-two__content patterns-css">
+            <h2>Destaques</h2>
+            <p>Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado.</p>
+        </div>
+        <div class="container-two__grid patterns-css">
+            <div class="grid__element">
+                <img src="./assets/img/1.png" alt="Tênis verde Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/2.png" alt="Tênis cinza Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/3.png" alt="Tênis branco com detalhes roxos, Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/4.png" alt="Tênis branco com detalhes cinza claro e preto, Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/5.png" alt="Tênis branco com detalhes pretos e rosa, Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/6.png" alt="Tênis branco com detalhes laranja, Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/7.png" alt="Tênis branco com detalhes cinza claro, Nike Jordan">
+            </div>
+            <div class="grid__element">
+                <img src="./assets/img/8.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span> &copy; Todos os direitos reservados.</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 30
+        });
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        const sr = ScrollReveal ({
+            origin: 'left',
+            distance: '50px',
+            duration: 2000,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.cover__content h1', { delay: 200 });
+        ScrollReveal().reveal('.cover__content p', { delay: 200 });
+        ScrollReveal().reveal('.grid__element', { delay:200 });
+        ScrollReveal().reveal('.grid__element img', {delay:200});
+    </script>
+</body>
+
+</html>
