@@ -1,0 +1,257 @@
+:root {
+    --green-color: #628E75;
+    --petroleum-green-color: ##1A4855;
+    --white-color: #FFFFFF;
+    --white-color-two: #F9F9F9;
+    --dark-green-color: #658E76;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    cursor: default;
+}
+
+.container-bg {
+    width: 100%;
+    min-height: 100%;
+    background-color: #628E75;
+    background: linear-gradient(145deg, #628E75, #1A4855);
+}
+
+.content-config {
+    max-width: 120rem;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    max-width: 10rem;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__icons a {
+    padding-right: 2.5rem;
+}
+
+.icon-config {
+    font-size: 2.4rem;
+    -webkit-text-stroke-color: var(--white-color);
+    color: transparent;
+}
+
+.fa-instagram {
+    color: var(--white-color);
+}
+
+.icon-config:not(.fa-instagram) {
+    -webkit-text-stroke-width: 0.12rem;
+}
+
+.container-main {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    align-self: center;
+}
+
+.container-main .main-content {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white-color-two);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    animation: move 3s ease-in-out;
+    animation-duration: 2000ms;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(2rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+.main-content .content__title {
+    text-transform: uppercase;
+    max-width: 44rem;
+}
+
+.content__title h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.content__title h2 {
+    font-weight: 900;
+    font-size: 6.8rem;
+    line-height: 7.412rem;
+    margin-top: 1.4rem;
+}
+
+.content__text {
+    font-size: 1.6rem;
+    margin: 3.5rem 0;
+    font-weight: 400;
+    max-width: 44.5rem;
+}
+
+.content__buttons {
+    display: flex;
+    width: 45rem;
+}
+
+.content__buttons button{
+    width: 22.5rem;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color-two);
+    transition: all 500ms linear;
+    cursor: pointer;
+}
+
+.content__buttons button:nth-child(1){
+    background-color: var(--dark-green-color);
+    border: none;
+}
+
+.content__buttons button:nth-child(2){
+    background-color: transparent;
+    border: 2px solid var(--dark-green-color);
+}
+
+.content__buttons button:nth-child(1) .fa-play{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.content__buttons button:hover{
+    animation: moveToRight 2s linear;
+    animation-delay: 100ms;
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: skew(-20deg) translateX(0rem);
+    }
+
+    100% {
+        transform: skew(-20deg) translateX(1rem);
+    }
+}
+
+.content__buttons span{
+    transform: skew(20deg);
+    -webkit-transform: skew(20deg);
+}
+
+.main__img {
+    max-width: 80rem;
+}
+
+.main__img img {
+    width: 100%;
+    margin-left: 2rem;
+    animation: float 2.5s linear infinite;
+    animation-delay: 1000ms;
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@media all and (max-width: 600px){
+
+    .icon-config{
+        font-size: 2rem;
+    }
+
+    .container-main {
+        flex-direction: column-reverse;
+       
+    }
+
+    .container-main .main-content {
+        max-width: 35rem;
+    }
+
+    .content__title h2{
+        font-size: 5.4rem;
+
+    }
+
+    .content__text{
+        font-size: 1.4rem;
+    }
+
+    .content__buttons{
+        flex-direction: column;
+        max-width: 22.5rem;
+    }
+
+    .content__buttons button {
+        margin-left: 0; 
+    }
+
+    .content__buttons button:nth-child(1) {
+        margin-bottom: 2rem;
+    }
+
+    .main__img img{
+       
+        margin-left: 0;
+    }
+}
