@@ -1,3 +1,10 @@
+:root {
+    --white-color: #FFFFFF;
+    --blue-color: #0072D2;
+    --dark-color: #131318;
+    --dark-color2: #19191F;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +17,24 @@ html {
 
 body {
     max-width: 100vw;
-    height: 100vh;
-    
+    height: 100vh; 
+    font-family: 'B612', sans-serif;
 }
 
 .main-container {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     background-image: url('../img/fundo.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.main-container__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    color: var(--white-color);
 }
