@@ -3,6 +3,7 @@
     --blue-color: #0072D2;
     --dark-color: #131318;
     --dark-color2: #19191F;
+    --yellow-color: #FFA800;
 }
 
 * {
@@ -19,8 +20,8 @@ body {
     max-width: 100vw;
     height: 100vh; 
     font-family: 'B612', sans-serif;
+    z-index: -1;
 }
-
 
 .main-container {
     width: 100%;
@@ -30,7 +31,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat; 
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .main-container::after{
@@ -90,10 +91,10 @@ body {
 
 .content__info {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     margin-left: 6rem;
-    height: 25rem;
+    height: 28rem;
 }
 
 .info__sinopse {
@@ -105,6 +106,64 @@ body {
     font-size: 2rem;
     font-weight: 400;
     text-align: justify;
+    line-height: 1.8;
 }
 
-.
+.info__about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 7.5rem;
+    gap: 1rem;
+}
+
+.info__about-time span:nth-child(2){
+    margin-left: 1rem;
+}
+
+.info__about-rating {
+    font-size: 3.5rem;
+    color: var(--yellow-color);
+    cursor: default;
+}
+
+.info__about-rating .fa-solid{
+    font-size: 100%;
+}
+
+.info__about-rating .fa-solid:nth-child(5) {
+    color: rgba(255, 255, 255, 0.5);
+    stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.info__buttons{
+    max-width: 34rem;
+    display: flex;
+    align-items: center;
+}
+
+.info__buttons button {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 0.3rem;
+    border: none;
+    color: var(--white-color);
+}
+
+.info__buttons button:nth-child(1) {
+    background-color:  var(--blue-color);
+    margin-right: 2rem;
+    width: 50%;
+}
+
+.info__buttons button:nth-child(2){
+    width: 35%;
+    background-color: var(--dark-color);
+    border: 1px solid var(--white-color);
+} 
