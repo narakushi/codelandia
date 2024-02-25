@@ -4,6 +4,7 @@
     --dark-color: #131318;
     --dark-color2: #19191F;
     --yellow-color: #FFA800;
+    --grey-transparent-color: #ffffff2b;
 }
 
 * {
@@ -152,22 +153,32 @@ body {
 }
 
 .star-icon::before{
-    content: "\2605";
+    content: "\f005";
     font-size: 4rem;
     color: var(--yellow-color);
     cursor: pointer;
+    margin-left: 1rem;
 }
 
 .star-icon.ativo ~ .star-icon::before{
-    content: "\2606"; /*estrelas vazias após a classe ativo*/
+    content: "\f005"; /*estrelas vazias após a classe ativo*/
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: var(--white-color);
+    color: var(--grey-transparent-color);
 }
 
 .info__about-rating:hover .star-icon::before{
-    content: "\2605"; /*estrelas cheias ao passar o mouse*/
+    content: "\f005"; /*estrelas cheias ao passar o mouse*/
+    color: var(--yellow-color);
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: transparent;
 }
 
 .star-icon:hover ~ .star-icon::before {
-    content: "\2606"; /*estrelas que ficam com hover tem suas irmãs*/
+    content: "\f005"; /*estrelas que ficam com hover tem suas irmãs seguintes vázias*/
+    color: var(--grey-transparent-color);
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: var(--white-color);
 }
 
 
