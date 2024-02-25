@@ -21,6 +21,7 @@ body {
     height: 100vh;
     font-family: 'B612', sans-serif;
     z-index: -1;
+    cursor: default;
 }
 
 .main-container {
@@ -88,7 +89,7 @@ body {
     align-items: center;
     margin-right: 6rem;
     transform-style: preserve-3d;
-    transition: all 500ms linear;
+    transition: all 1000ms linear;
 }
 
 .flip:hover {
@@ -143,21 +144,33 @@ body {
 }
 
 .info__about-rating {
-    font-size: 3.5rem;
+    display: flex;
+}
+
+.info__about-rating .star-icon {
+    list-style: none;
+}
+
+.star-icon::before{
+    content: "\2605";
+    font-size: 4rem;
     color: var(--yellow-color);
-    cursor: default;
+    cursor: pointer;
 }
 
-.info__about-rating .fa-solid {
-    font-size: 100%;
+.star-icon.ativo ~ .star-icon::before{
+    content: "\2606"; /*estrelas vazias após a classe ativo*/
 }
 
-.info__about-rating .fa-solid:nth-child(5) {
-    color: rgba(255, 255, 255, 0.5);
-    stroke-width: 0.1rem;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
+.info__about-rating:hover .star-icon::before{
+    content: "\2605"; /*estrelas cheias ao passar o mouse*/
 }
+
+.star-icon:hover ~ .star-icon::before {
+    content: "\2606"; /*estrelas que ficam com hover tem suas irmãs*/
+}
+
+
 
 .info__buttons {
     max-width: 34rem;
