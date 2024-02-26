@@ -282,7 +282,7 @@ a{
         font-size: 1.8rem;
         line-height: 1.5;
         border-top: 1px solid var(--white-color);
-        padding-top: 5%;
+        padding-top: 4%;
     }
 
     .info__about{
@@ -305,7 +305,7 @@ a{
         order: -1;
         justify-content: center;
         max-width: 100%;
-        padding-bottom: 5%;
+        padding-bottom: 4%;
         position: relative;
     }
 
