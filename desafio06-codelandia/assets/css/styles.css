@@ -245,7 +245,7 @@ a{
 @media all and (max-width: 768px){
 
     .main-container{
-        background-size: auto;
+        background-size: 150vh;
     }
     
     .content__card {
