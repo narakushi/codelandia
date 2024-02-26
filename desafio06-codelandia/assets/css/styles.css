@@ -32,9 +32,9 @@ a{
 
 .main-container {
     width: 100%;
-    height: 100%;
+   height: 100%;
     background-image: url('../img/fundo.svg');
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -50,7 +50,7 @@ a{
     top: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -2;
     background: inherit;
 }
 
@@ -60,14 +60,13 @@ a{
     flex-flow: column nowrap;
     font-weight: 700;
     text-transform: uppercase;
-    padding-top: 2rem;
-    position: relative;
     color: var(--white-color);
+    padding-top: 5rem;
 }
 
 .main-container__titles h1 {
     font-size: 2rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 .main-container__titles h2 {
@@ -76,10 +75,10 @@ a{
 
 .main-container__content {
     width: 100%;
-    min-height: 65%;
+    height: 60%;
     display: flex;
     justify-content: center;
-    padding: 0 3rem;
+    padding: 0 2rem;
     color: var(--white-color);
 }
 
@@ -186,8 +185,6 @@ a{
     -webkit-text-stroke-color: var(--white-color);
 }
 
-
-
 .info__buttons {
     max-width: 34rem;
     display: flex;
@@ -241,4 +238,76 @@ a{
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     box-shadow: 0rem 0rem 0.1rem 0.1rem #5b45cd32;
+}
+
+@media all and (max-width: 768px){
+    .content__card {
+        display: none;
+    }
+
+    .content {
+        align-items: flex-end;
+    }
+
+    .content__info{
+       height: auto;
+    }
+
+    .content__info::after{
+        content: '';
+        width: 100%;
+        min-height: 35%;
+        background-color: var(--dark-color2);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+
+    .info__sinopse p{
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    .info__about{
+        order: -1;
+        margin: 0;
+        gap: 0;
+        font-size: 1.8rem;
+        margin-bottom: 8rem
+    }
+
+    .info__about-time span:nth-child(2) {
+        margin-left: 0.2rem;
+    }
+
+    .info__about-rating .star-icon::before{
+        font-size: 2rem;
+    }
+
+    .info__buttons{
+        order: -1;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .info__buttons button{
+        padding: 1rem 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .info__buttons button:nth-child(1){
+        margin-right: 1rem;
+    }
+
+    .info__buttons button:nth-child(2), 
+    .info__buttons button:nth-child(1){
+        width: 50%;
+        font-size: 1.4rem;
+    }
+
+
 }
