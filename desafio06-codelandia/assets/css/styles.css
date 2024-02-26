@@ -34,11 +34,12 @@ a{
     width: 100%;
    height: 100%;
     background-image: url('../img/fundo.svg');
-    background-position: center center;
+    background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
+    background-attachment: fixed;
 }
 
 .main-container::after {
@@ -52,6 +53,7 @@ a{
     right: 0;
     z-index: -2;
     background: inherit;
+    background-attachment: fixed;
 }
 
 .main-container__titles {
@@ -241,6 +243,11 @@ a{
 }
 
 @media all and (max-width: 768px){
+
+    .main-container{
+        background-size: auto;
+    }
+    
     .content__card {
         display: none;
     }
