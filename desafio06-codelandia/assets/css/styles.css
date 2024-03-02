@@ -41,6 +41,9 @@ a {
     position: relative;
     z-index: 1;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-container::after {
@@ -64,21 +67,18 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--white-color);
-    padding-top: 5rem;
 }
 
 .main-container__titles h1 {
-    font-size: 2rem;
-    margin-bottom: 4rem;
+    font-size: 1.8rem;
 }
 
 .main-container__titles h2 {
-    font-size: 9.6rem;
+    font-size: 9.4rem;
 }
 
 .main-container__content {
     width: 100%;
-    height: 60%;
     display: flex;
     justify-content: center;
     padding: 0 2rem;
@@ -111,6 +111,7 @@ a {
 
 .content__img img {
     border-radius: 2rem;
+    width: 100%;
 }
 
 .content__img:nth-child(2) {
@@ -120,9 +121,10 @@ a {
 
 .content__info {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
-    height: 28rem;
+    max-height: 28rem;
+    gap: 3rem;
 }
 
 .info__sinopse {
@@ -131,11 +133,10 @@ a {
 
 .info__sinopse p {
     width: 100%;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.8rem;
+    font-weight: 300;
     text-align: justify;
-    line-height: 1.8;
-    padding: 2.5rem 0;
+    line-height: 1.6;
 }
 
 .info__about {
@@ -162,7 +163,7 @@ a {
 
 .star-icon::before {
     content: "\f005";
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: var(--yellow-color);
     cursor: pointer;
     margin-left: 0.5rem;
@@ -247,16 +248,20 @@ a {
     box-shadow: 0rem 0rem 0.1rem 0.1rem #5b45cd32;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px){
+    .main-container__titles h2 {
+        font-size: 6.4rem;
+    }
 
     .main-container {
         background-size: 150vh;
         background-color: #19191F;
     }
 
-    .main-container__content {
-        height: 65%;
+    .main-container__content{
+        height: 68%;
     }
+
 
     .content__card {
         display: none;
@@ -268,6 +273,7 @@ a {
 
     .content__info {
         height: auto;
+        gap: 1rem;
     }
 
     .content__info::after {
@@ -288,7 +294,7 @@ a {
         font-size: 1.4rem;
         line-height: 1.5;
         border-top: 1px solid var(--grey-transparente-color2);
-        padding-top: 4%;
+        padding-top: 2%;
     }
 
     .info__about {
@@ -296,7 +302,6 @@ a {
         margin: 0;
         gap: 0;
         font-size: 1.6rem;
-        margin-bottom: 5rem;
     }
 
     .info__about-time span:nth-child(2) {
@@ -311,7 +316,7 @@ a {
         order: -1;
         justify-content: center;
         max-width: 100%;
-        padding: 8% 0;
+        padding: 2% 0;
         position: relative;
     }
 
@@ -334,10 +339,9 @@ a {
 }
 
 @media all and (max-width: 299px) {
-    .main-container__content{
-        max-height: 65%;
+    .main-container__content {
+        height: 60%;
     }
-
     .info__about {
         font-size: 1.4rem;
     }
