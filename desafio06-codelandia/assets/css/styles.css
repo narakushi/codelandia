@@ -26,7 +26,7 @@ body {
     cursor: default;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -135,6 +135,7 @@ a{
     font-weight: 400;
     text-align: justify;
     line-height: 1.8;
+    padding: 2.5rem 0;
 }
 
 .info__about {
@@ -159,7 +160,7 @@ a{
     list-style: none;
 }
 
-.star-icon::before{
+.star-icon::before {
     content: "\f005";
     font-size: 4rem;
     color: var(--yellow-color);
@@ -167,22 +168,25 @@ a{
     margin-left: 0.5rem;
 }
 
-.star-icon.ativo ~ .star-icon::before{
-    content: "\f005"; /*estrelas vazias após a classe ativo*/
+.star-icon.ativo~.star-icon::before {
+    content: "\f005";
+    /*estrelas vazias após a classe ativo*/
     -webkit-text-stroke-width: 0.1rem;
     -webkit-text-stroke-color: var(--white-color);
     color: var(--grey-transparent-color);
 }
 
-.info__about-rating:hover .star-icon::before{
-    content: "\f005"; /*estrelas cheias ao passar o mouse*/
+.info__about-rating:hover .star-icon::before {
+    content: "\f005";
+    /*estrelas cheias ao passar o mouse*/
     color: var(--yellow-color);
     -webkit-text-stroke-width: 0;
     -webkit-text-stroke-color: transparent;
 }
 
-.star-icon:hover ~ .star-icon::before {
-    content: "\f005"; /*estrelas que ficam com hover tem suas irmãs seguintes vázias*/
+.star-icon:hover~.star-icon::before {
+    content: "\f005";
+    /*estrelas que ficam com hover tem suas irmãs seguintes vázias*/
     color: var(--grey-transparent-color);
     -webkit-text-stroke-width: 0.1rem;
     -webkit-text-stroke-color: var(--white-color);
@@ -243,17 +247,17 @@ a{
     box-shadow: 0rem 0rem 0.1rem 0.1rem #5b45cd32;
 }
 
-@media all and (max-width: 768px) and (min-width: 300px){
+@media all and (max-width: 768px) {
 
-    .main-container{
+    .main-container {
         background-size: 150vh;
         background-color: #19191F;
     }
 
-    .main-container__content{
+    .main-container__content {
         height: 65%;
     }
-    
+
     .content__card {
         display: none;
     }
@@ -262,11 +266,11 @@ a{
         align-items: flex-end;
     }
 
-    .content__info{
-       height: auto;
+    .content__info {
+        height: auto;
     }
 
-    .content__info::after{
+    .content__info::after {
         content: '';
         width: 100%;
         height: 30%;
@@ -277,16 +281,17 @@ a{
         z-index: -1;
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
+        padding: 1rem 0;
     }
 
-    .info__sinopse p{
+    .info__sinopse p {
         font-size: 1.4rem;
         line-height: 1.5;
         border-top: 1px solid var(--grey-transparente-color2);
         padding-top: 4%;
     }
 
-    .info__about{
+    .info__about {
         order: -1;
         margin: 0;
         gap: 0;
@@ -298,11 +303,11 @@ a{
         margin-left: 0.2rem;
     }
 
-    .info__about-rating .star-icon::before{
+    .info__about-rating .star-icon::before {
         font-size: 2rem;
     }
 
-    .info__buttons{
+    .info__buttons {
         order: -1;
         justify-content: center;
         max-width: 100%;
@@ -310,20 +315,43 @@ a{
         position: relative;
     }
 
-    .info__buttons button{
+    .info__buttons button {
         padding: 1rem 0.8rem;
-     
+
     }
 
-    .info__buttons button:nth-child(1){
+    .info__buttons button:nth-child(1) {
         margin-right: 1rem;
         white-space: nowrap;
     }
 
-    .info__buttons button:nth-child(2), 
-    .info__buttons button:nth-child(1){
+    .info__buttons button:nth-child(2),
+    .info__buttons button:nth-child(1) {
         width: 50%;
         font-size: 1.4rem;
     }
 
+}
+
+@media all and (max-width: 299px) {
+    .main-container__content{
+        max-height: 65%;
+    }
+
+    .info__about {
+        font-size: 1.4rem;
+    }
+
+    .info__about-rating .star-icon::before {
+        font-size: 1.5rem;
+    }
+
+    .info__sinopse p{
+        font-size: 1.2rem;
+    }
+
+    .info__buttons button:nth-child(2),
+    .info__buttons button:nth-child(1){
+        font-size: 1.1rem;
+    }
 }
