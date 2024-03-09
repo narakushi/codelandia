@@ -45,3 +45,13 @@ body {
     border-right: 0 solid transparent;
     border-bottom: 100vh solid var(--red-color);
 }
+
+.bg-diagonal__img {
+    position: absolute;
+    right: 20rem;
+    bottom: inherit;
+}
+
+.bg-diagonal__img img{
+    rotate: 0deg;
+}
