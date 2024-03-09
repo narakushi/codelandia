@@ -49,7 +49,7 @@ body {
 .bg-diagonal__img {
     position: absolute;
     right: 20rem;
-    bottom: inherit;
+    bottom: 0;
 }
 
 .bg-diagonal__img img{
