@@ -47,11 +47,12 @@ body {
 }
 
 .bg-diagonal__img {
+    max-width: 50rem;
     position: absolute;
     right: 20rem;
     bottom: 0;
 }
 
 .bg-diagonal__img img{
-    rotate: 0deg;
+    width: 100%;
 }
