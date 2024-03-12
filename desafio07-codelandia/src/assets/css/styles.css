@@ -42,11 +42,9 @@ body {
     align-items: center;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
+.content .content__logo {
+    padding-bottom: 5rem;
 }
-
 
 .container__bg-diagonal {
     position: absolute;
