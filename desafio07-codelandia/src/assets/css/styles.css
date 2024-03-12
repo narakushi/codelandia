@@ -46,6 +46,17 @@ body {
     padding-bottom: 5rem;
 }
 
+.chars__borders {
+    max-width: 17rem;
+    max-height: 17rem;
+    border: 2px solid var(--white-color);
+    background-color: var(--red-color);
+}
+
+.chars__borders img {
+    width: 100%;
+}
+
 .container__bg-diagonal {
     position: absolute;
     right: 0;
