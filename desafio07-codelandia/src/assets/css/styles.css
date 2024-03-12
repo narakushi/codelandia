@@ -34,6 +34,20 @@ body {
     -webkit-text-stroke-color: var(--white-color);
 }
 
+.container__content {
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .container__bg-diagonal {
     position: absolute;
     right: 0;
@@ -47,7 +61,7 @@ body {
 }
 
 .bg-diagonal__img {
-    max-width: 50rem;
+    max-width: 60rem;
     position: absolute;
     right: 20rem;
     bottom: 0;
