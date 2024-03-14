@@ -64,11 +64,6 @@ body {
     background-color: var(--red-color);
 }
 
-.chars__borders::after {  
-    background: aqua;
-    width: 15rem;
-    height: 15rem;
-}
 
 .chars__borders img {
     width: 100%;
