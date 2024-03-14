@@ -20,11 +20,18 @@ body {
     background-color: var(--dark-blue-color);
 }
 
+.main-content{
+    max-width: 120rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
 .header__icons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
 }
 
 .header__icons .icon-share {
@@ -37,20 +44,30 @@ body {
 .container__content {
     height: 70%;
     display: flex;
-    justify-content: space-around;
-    width: 50%;
     align-items: center;
+
 }
 
 .content .content__logo {
     padding-bottom: 5rem;
+    max-width: 35rem;
+}
+
+.content__logo img {
+    width: 100%;
 }
 
 .chars__borders {
-    max-width: 17rem;
-    max-height: 17rem;
+    max-width: 15rem;
+    max-height: 15rem;
     border: 2px solid var(--white-color);
     background-color: var(--red-color);
+}
+
+.chars__borders::after {  
+    background: aqua;
+    width: 15rem;
+    height: 15rem;
 }
 
 .chars__borders img {
