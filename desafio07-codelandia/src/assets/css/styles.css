@@ -47,6 +47,10 @@ body {
     align-items: center;
 }
 
+.content {
+    width: 100%;
+}
+
 .content .content__logo {
     padding-bottom: 5rem;
     max-width: 35rem;
@@ -64,11 +68,10 @@ body {
 .chars {
     position: relative;
     height: 18rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 15rem;
-    max-height: 15rem;
+    width: 12rem;
+    height: 12rem;
+    display: inline-block;
+    margin-right: 3rem;
 }
 
 .chars__borders {
@@ -95,7 +98,6 @@ body {
     rotate: 40deg;
 }
 
-
 .chars__borders img {
     width: 100%;
 }
@@ -113,8 +115,8 @@ body {
 .pre-chars__borders::before{
     content: '';
     position: absolute;
-    width: 3.5rem;
-    height: 3.3rem;
+    width: 3.4rem;
+    height: 3.4rem;
     top: -1.5rem;
     background-color: var(--dark-blue-color);
     border-right: 0.1rem solid var(--white-color);
