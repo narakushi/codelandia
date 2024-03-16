@@ -42,7 +42,7 @@ body {
 }
 
 .container__content {
-    height: 70%;
+    height: 80%;
     display: flex;
     align-items: center;
 }
@@ -68,10 +68,10 @@ body {
 .chars {
     position: relative;
     height: 18rem;
-    width: 12rem;
-    height: 12rem;
+    width: 14rem;
+    height: 14rem;
     display: inline-block;
-    margin-right: 3rem;
+    margin-right: 2.5rem;
 }
 
 .chars__borders {
@@ -135,7 +135,7 @@ body {
 }
 
 .bg-diagonal {
-    border-left: 90vw solid transparent;
+    border-left: 85vw solid transparent;
     border-right: 0 solid transparent;
     border-bottom: 100vh solid var(--red-color);
 }
