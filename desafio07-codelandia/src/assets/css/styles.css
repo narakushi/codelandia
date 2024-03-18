@@ -67,7 +67,6 @@ body {
 
 .chars {
     position: relative;
-    height: 18rem;
     width: 14rem;
     height: 14rem;
     display: inline-block;
@@ -141,9 +140,9 @@ body {
 }
 
 .bg-diagonal__img {
-    max-width: 60rem;
+    max-width: 50%;
     position: absolute;
-    right: 20rem;
+    right: 10%;
     bottom: 0;
 }
 
