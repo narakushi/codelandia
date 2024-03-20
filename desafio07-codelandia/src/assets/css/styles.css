@@ -149,3 +149,34 @@ body {
 .bg-diagonal__img img{
     width: 100%;
 }
+
+@media all and (max-width: 768px) {
+    .bg-diagonal {
+        border-left: 100vw solid transparent;
+    }
+
+    .bg-diagonal__img {
+        display: none;
+    }
+
+    .content__chars {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .chars {
+        display: flex;
+    }
+
+    .pre-chars__borders:nth-child(3)::before {
+        background-color: var(--red-color);
+    }
+
+    .content__logo img {
+        display: none;
+    }
+}
